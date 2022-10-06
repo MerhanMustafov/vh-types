@@ -18,7 +18,22 @@ async function getData(word: string){
     }
 } 
 
+async function getVehicles(){
+    const response = await fetch(baseUrl)
+     try{
+        if(response.ok == false){
+            await response.json()
+            throw new Error('Sth went wrong !')
+        }
+        return response.json()
+    }catch{
+        throw new Error('Sth went wrong !')
+    }
+
+}
+
 
 export {
     getData,
+    getVehicles
 }
