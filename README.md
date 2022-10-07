@@ -1,6 +1,6 @@
 ##  The application is deployed on Heroku https://vh-types.herokuapp.com/
 
-`in order for the apliccation to work properly, your VPN  address should be outside Europe preferebly US or UK`
+`in order for the application to work properly, your VPN  address should be outside Europe preferebly US or UK`
 ###  In case you want to run the app locally, you can do it by:
 1 - cloning the project and installing all dependencies <br />
 2 - executing the command `npm run start`
