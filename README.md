@@ -1,4 +1,4 @@
-##  The application is deployed on Heroku [Link](https://vh-types.herokuapp.com/)
+##  The application is deployed on Heroku https://vh-types.herokuapp.com/
 
 `in order for the apliccation to work properly, your VPN  address should be outside Europe preferebly US or UK`
 ###  In case you want to run the app locally, you can do it by:
@@ -7,10 +7,7 @@
 
 <br />
 <br />
-<br />
-<br />
-
-********************************************************************************<br />
+********************************************************************************************<br />
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
