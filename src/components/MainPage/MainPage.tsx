@@ -24,7 +24,7 @@ function MainPage(){
                     <BoxComponent  key={obj.id} data={obj} included={data.included}></BoxComponent>
                 ) 
                 : 
-                <div className="empty">Type in to Search !</div>
+                <div className="empty">Type in to Search or select a type !</div>
             }
         </div>
     )

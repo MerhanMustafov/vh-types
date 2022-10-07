@@ -1,27 +1,27 @@
 @import url(./reset.css);
 
 .App{
-    border: 2px solid red;
+    /* border: 2px solid red; */
 }
 
 .main-page{
     width: 80%;
     margin: 0 auto;
-    border: 2px solid green;
+    /* border: 2px solid green; */
 }
 
 .searchWrapper{
     margin: 50px 0 0 0 ;
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
     /* width: 40%; */
 }
 
 #serchEngine{
     display: block;
-    width: 95%;
+    width: 99%;
     height: 80px;
     margin: 0 auto;
-    border: 3px solid black;
+    border: 1px solid black;
     font-size: 50px;
     border-radius: 15px;
     
@@ -34,12 +34,12 @@
 .contentWrapper{
     display: flex;
     align-items: center;
-    margin: 50px;
+    margin: 50px 0 20px 0;
     gap: 20px;
 }
 
 .imgWrapper{
-    width: 20%;
+    width: 25%;
     border-radius: 20px;
 }
 .img{
@@ -57,7 +57,7 @@
 
 .empty{
     text-align: center;
-    font-size: 70px;
+    font-size: 40px;
     margin: 20px auto;
 }
 
@@ -75,10 +75,12 @@
 }
 .vh-type{
     white-space: nowrap;
+    font-size: 17px;
+    transition: font-size 100ms ease-in-out;
 }
 
 
 .vh-type:hover{
     color: blue;
-    scale: 1.5;
+    font-size: 18px;
 }
