@@ -21,7 +21,7 @@ function MainPage(){
     }, [])
     return(
         <div className="w main-page">
-            <Search vhTypes={vhTypes} setData={setData}></Search>
+            <Search vhTypes={vhTypes} setData={setData} data={data}></Search>
             
             {data && data?.data.length > 0 ?
                 data?.data.map((obj: any) => 

@@ -82,5 +82,14 @@
 
 .vh-type:hover{
     color: blue;
-    font-size: 18px;
+    /* color: rgb(0, 255, 0); */
+    font-size: 16px;
+}
+
+.bold{
+    /* color: rgb(0, 255, 0); */
+    color: blue;
+    font-size: 25px;
+    border: 2px solid blue;
+    padding: 0 5px;
 }
