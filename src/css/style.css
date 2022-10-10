@@ -82,14 +82,42 @@
 
 .vh-type:hover{
     color: blue;
-    /* color: rgb(0, 255, 0); */
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .bold{
-    /* color: rgb(0, 255, 0); */
     color: blue;
-    font-size: 25px;
+    font-size: 19px;
     border: 2px solid blue;
-    padding: 0 5px;
+    padding: 5px 10px;
+}
+.loadingWrapper{
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    align-items: center;
+    margin: 10% 0 0 0 ;
+}
+.loadingText{
+    font-size: 30px;
+}
+.loading{
+    border: 2px solid rgba(255, 0, 0, 0.315);
+    border-radius: 30px;
+    width: 70%;
+    height: 20px;
+    margin: 0 auto;
+    animation-name: sp;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+   
+}
+
+@keyframes sp{
+    0% {background: linear-gradient(to right, blue, white, white, white, white, white, white);}
+    25% {background: linear-gradient(to right, blue, blue, white, white, white, white,white);}
+    50% {background: linear-gradient(to right, blue, blue, blue, white, white, white,white);}
+    75% {background: linear-gradient(to right, blue, blue, blue, blue, white, white,white);}
+    100% {background: linear-gradient(to right, blue, blue, blue, blue, blue, blue, blue, blue);}
 }

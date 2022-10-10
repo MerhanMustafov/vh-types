@@ -7,27 +7,32 @@ interface Props {
   vhTypes: Vehicles[]
   setData: any
   data?: Data | null
+  setSpinner: (b: boolean) => void
   // setData: React.SetStateAction<S> = S | ((prevState: S) => S)
 }
 function Search(props: Props) {
-  let { vhTypes, setData, data } = props
+  let { vhTypes, setData, data, setSpinner } = props
   let [word, setWord] = useState('')
   let key = 100
 
   async function requestHandler(e: any, type: string) {
     if (e.key === 'Enter') {
       cleanCssBold()
+      setSpinner(true)
       if (word.length > 0) {
         const response = await getData(word)
         setData(response)
       } else {
         setData(null)
       }
+      setSpinner(false)
     } else if (e.type === 'click') {
+      setSpinner(true)
       cssManipulation(e, type)
       setWord(e.target.id)
       const response = await getData(e.target.innerText)
       setData(response)
+      setSpinner(false)
     }
   }
 
