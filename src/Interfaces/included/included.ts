@@ -5,5 +5,5 @@ interface IncludedAtributes{
 export interface included{
     id: string,
     type: string,
-    atributes: IncludedAtributes[]
+    attributes: IncludedAtributes
 }

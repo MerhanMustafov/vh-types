@@ -3,18 +3,23 @@ import React from 'react';
 interface Atributes {
     name: string
 }
-interface PrimaryImageData{
-    id:string,
-    type: string
-}
+
 interface Relationships {
     primary_image: PrimaryImageData
 }
 
+interface PrimaryImageData{
+    data: ImageData
+}
+interface ImageData {
+    id: string,
+}
+
+
 export interface data {
     id: string, 
     type: string,
-    atributes: Atributes
+    attributes: Atributes
     relationships: Relationships
 }
 
