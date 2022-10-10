@@ -1,8 +1,16 @@
 import React, { useState, useEffect } from 'react'
 import { getData } from '../../Api/requests'
+import {Vehicles} from '../../Interfaces/meta/meta'
 
-function Search(props: any) {
-  let { data, setData, vhTypes } = props
+
+interface Props {
+    vhTypes: Vehicles[],
+    setData: any
+    // setData: React.SetStateAction<S> = S | ((prevState: S) => S)
+
+}
+function Search(props: Props) {
+  let  {vhTypes, setData} = props
   let [word, setWord] = useState('')
 
   async function requestHandler(e: any) {
@@ -29,18 +37,18 @@ function Search(props: any) {
         id="serchEngine"
         placeholder="Vehicle Types"
         defaultValue={word}
-        onChange={(e: any) => setWord(e.target.value)}
+        onChange={(e) => setWord(e.target.value)}
         onKeyDown={(e) => requestHandler(e)}
       />
       <div className="vh-types">
         {' '}
         <span> Types: </span>
         {vhTypes && vhTypes?.length > 0
-          ? vhTypes.map((v: any) => (
+          ? vhTypes.map((v) => (
               <div
                 key={Math.random()}
                 className="vh-type"
-                onClick={(e: any) => requestHandler(e)}
+                onClick={(e) => requestHandler(e)}
               >
                 {v.type}
               </div>

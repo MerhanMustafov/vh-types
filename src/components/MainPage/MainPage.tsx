@@ -3,9 +3,14 @@ import {getVehicles} from '../../Api/requests'
 import {Search} from '../Search/SeaechComponent';
 import {BoxComponent} from '../Content/Box'
 
+import {Data} from '../../Interfaces/Data'
+import {Vehicles} from '../../Interfaces/meta/meta' 
+
+
+
 function MainPage(){
-    const [data, setData] = useState<any>(null)
-    const [vhTypes, setVhTypes] = useState([])
+    const [data, setData] = useState<Data | null>(null)
+    const [vhTypes, setVhTypes] = useState<Vehicles[]>([])
 
     useEffect(() => {
         async function getVhTypes(){
@@ -16,11 +21,10 @@ function MainPage(){
     }, [])
     return(
         <div className="w main-page">
-            <Search data={data} setData={setData} vhTypes={vhTypes}></Search>
+            <Search vhTypes={vhTypes} setData={setData}></Search>
             
             {data && data?.data.length > 0 ?
                 data?.data.map((obj: any) => 
-                    //key={obj.id}
                     <BoxComponent  key={obj.id} data={obj} included={data.included}></BoxComponent>
                 ) 
                 : 
